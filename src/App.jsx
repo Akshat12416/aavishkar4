@@ -5,7 +5,7 @@ import path from './assets/flightpath.png';
 import calendar from './assets/calendar.png';
 import location from './assets/location.png';
 import user from './assets/user.png';
-import TrackCard from './components/trackcard';
+import TrackCard from './components/TrackCard';
 import Timelinecardleft from './components/timelinecardleft';
 import Timelinecardright from './components/timelinecardright';
 import Footer from './components/Footer';
