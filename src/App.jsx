@@ -9,6 +9,7 @@ import TrackCard from './components/TrackCard';
 import Timelinecardleft from './components/timelinecardleft';
 import Timelinecardright from './components/timelinecardright';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 
 
@@ -45,7 +46,9 @@ function App() {
   return (
     
     <>
-    
+      <div>
+      <Navbar />
+      </div>
       <div className="flex flex-col items-center w-full min-h-[380vh] bg-[url('./assets/bluespace.jpg')] bg-fixed bg-cover bg-center relative">
         <img 
           src={logo} 
@@ -76,7 +79,7 @@ function App() {
           <p className="text-white text-4xl">↓</p>
         </div>
         )}
-        <div className='my-16 flex flex-col justify-center '>
+        <div id="about" className='my-16 scroll-mt-24 flex flex-col justify-center '>
             <div className='text-white text-4xl font-bold text-center z-10'>
               ABOUT THE EVENT
             </div>
@@ -110,14 +113,9 @@ function App() {
                 Solo & Duo
               </div>
             </div>
-            {showArrow2 && (
-            <div className="bottom-6 animate-bounce flex justify-center mt-12">
-              <p className="text-white text-4xl">↓</p>
-            </div>
-            )}
             
         </div>
-      <div className='flex flex-col h-auto'>
+      <div id="tracks" className='flex scroll-mt-24 flex-col h-auto'>
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-white text-4xl mb-10 font-mono font-bold">Event Tracks</h1>
 
@@ -152,7 +150,7 @@ function App() {
           />
         </div>
       </div>
-      <div className='text-white mt-24 font-mono font-bold text-4xl'>
+      <div id="timeline" className='text-white scroll-mt-20 mt-24 font-mono font-bold text-4xl'>
         Event Timeline
       </div>
       <div className='flex flex-row gap-4 items-start'>
@@ -183,7 +181,7 @@ function App() {
                   
 
 
-                   {/* Add more events here */}
+                  
                 </div>
             
       </div>
