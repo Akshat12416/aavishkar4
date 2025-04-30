@@ -10,6 +10,8 @@ import Timelinecardleft from './components/timelinecardleft';
 import Timelinecardright from './components/timelinecardright';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import istelogo from './assets/istelogo.png';
+import iiclogo from './assets/iiclogo.png';
 
 
 
@@ -17,6 +19,18 @@ import Navbar from './components/Navbar';
 function App() {
   const [showArrow1, setShowArrow1] = useState(true);
   const [showArrow2, setShowArrow2] = useState(false);
+
+  useEffect(() => {
+    const isDesktop = window.innerWidth > 450; 
+
+    if (isDesktop) {
+      document.body.innerHTML = `
+        <div style="display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;padding:20px;">
+          <h2 style="font-family:sans-serif;">Please visit on a smaller device.</h2>
+        </div>
+      `;
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,9 +104,12 @@ function App() {
             Organisers : 
             </div>
             <div className='text-white font-serif font-semibold text-center mt-3 text-2xl'>
-            ISTE & IIC  
+              <div className='flex flex-row justify-center mt-2 gap-8'>
+            <img className='h-24' src={istelogo} alt="ISTE" />  
+            <img className='h-16 mt-4' src={iiclogo} alt="IIC" />
             </div>
-            <div className='text-white text-4xl font-bold text-center mt-24'>
+            </div>
+            <div className='text-white text-4xl font-bold text-center mt-12'>
               Event Details
             </div>
             <div className='flex flex-row items-center bg-blue-900 mx-10 rounded-xl mt-8 h-auto '>

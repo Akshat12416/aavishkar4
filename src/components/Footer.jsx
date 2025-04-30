@@ -1,10 +1,14 @@
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import h2slogo from '../assets/h2slogo.png'
 
 function Footer() {
   return (
     <footer className="bg-slate-800 text-white py-8 px-4 mt-32">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-        
+        <div className="text-2xl font-bold flex flex-col items-start">
+          Platform Partner:
+          <img className="h-10 mt-4" src={h2slogo} alt="Hack2Skill" />
+        </div>
         {/* About Section */}
         <div className="max-w-md">
           <h2 className="text-xl font-semibold mb-2">About ISTE ABESIT</h2>
@@ -34,12 +38,12 @@ function Footer() {
               <FaLinkedin />
             </a>
             <a
-              href="https://github.com/ISTE-ABESIT"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400 transition"
             >
-              <FaGithub />
+              <FaWhatsapp />
             </a>
           </div>
         </div>
