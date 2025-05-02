@@ -12,11 +12,15 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import istelogo from './assets/istelogo.png';
 import iiclogo from './assets/iiclogo.png';
+import h2slogo from './assets/h2slogowhite.png';
 
 
 
 
 function App() {
+  const register =()=>{
+    window.open("https://vision.hack2skill.com/event/aavishkar4?utm_source=hack2skill&utm_medium=homepage");
+  };
   const [showArrow1, setShowArrow1] = useState(true);
   const [showArrow2, setShowArrow2] = useState(false);
 
@@ -131,7 +135,14 @@ function App() {
               </div>
             </div>
             
+              <button className='bg-inherit text-white border-2 border-white text-xl mt-12 mx-24 p-2 rounded-full font-mono' 
+              onClick={register}>
+                Register Now!!
+              </button>
+            
+            
         </div>
+
       <div id="tracks" className='flex scroll-mt-24 flex-col h-auto'>
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-white text-4xl mb-10 font-mono font-bold">Event Tracks</h1>
@@ -202,9 +213,18 @@ function App() {
                 </div>
             
       </div>
-      <div className='mt-20'>
+
+      <div className="text-2xl font-bold flex flex-col items-center text-white mt-40">
+          Platform Partner
+          <img className="h-16 mt-4" src={h2slogo} alt="Hack2Skill" />
+        </div>
+
+      <div className='mt-4'>
       <Footer/>
       </div>
+      
+      
+
 
       </div>
       
