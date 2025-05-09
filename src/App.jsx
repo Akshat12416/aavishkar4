@@ -13,6 +13,7 @@ import Navbar from './components/Navbar';
 import istelogo from './assets/istelogo.png';
 import iiclogo from './assets/iiclogo.png';
 import h2slogo from './assets/h2slogowhite.png';
+import rocket from './assets/rocket.png';
 
 
 
@@ -182,26 +183,36 @@ function App() {
         Event Timeline
       </div>
       <div className='flex flex-row gap-4 items-start'>
-        <div className='mt-12'>
+        <div className='mt-12 flex flex-col gap-16'>
         <Timelinecardleft 
                     title="Coming Soon"
                     description="Check out poster on Instagram at iste_abesit"
                     date="23/4/25"
                   />
+          <Timelinecardleft
+                    title="Reg. Started!"
+                    description="Check out poster on Instagram at iste_abesit"
+                    date="30/4/25"
+                  />
         </div>
             <div className='min-h-[70vh] mt-12 rounded-full bg-gray-600 flex flex-col w-2'>
-            <div className="bg-blue-600 rounded-full min-h-[12vh]">
+            <div className="bg-yellow-500 rounded-full min-h-[28vh]">
               
             </div>
-            <div className='relative rounded-full bg-sky-400 w-5 h-5 z-4 -mt-2 -ml-1.5'></div>
-            <div className='relative rounded-full bg-sky-400 animate-ping z-2 w-5 h-5 opacity-75 -ml-1.5 -mt-5'></div>
+            <div className='relative rounded-full w-12 z-4 -mt-2 -ml-5'><img src={rocket} alt="" /></div>
+            <div className='relative rounded-full bg-yellow-200 animate-ping z-2 w-5 h-5 opacity-75 -ml-1.5 -mt-14'></div>
             
             </div>
-                <div className="mt-28 flex flex-col">
+                <div className="mt-28 flex flex-col gap-16">
           
                 <Timelinecardright 
                   title="Event partner"
                   description=" Hack2Skill as platform partner was released"
+                  date="24/4/25"
+                />
+                <Timelinecardright 
+                  title="Submit PPT!!"
+                  description="Submit PPT on the link recieved via Email."
                   date="24/4/25"
                 />
                 
@@ -211,6 +222,7 @@ function App() {
 
                   
                 </div>
+                
             
       </div>
 
